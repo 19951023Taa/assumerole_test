@@ -4,7 +4,7 @@ region = "ap-northeast-3"
 
 /* VPC */
 vpc_cidr = "10.0.0.0/16"
-vpc_id   = "TBD"
+vpc_id   = "vpc-0368901606285c9b0"
 subnet_cidrs = {
   public_subnet_a_01  = { cidr_block = "10.0.1.0/24", az = "ap-northeast-3a", }
   public_subnet_c_01  = { cidr_block = "10.0.2.0/24", az = "ap-northeast-3c", }
