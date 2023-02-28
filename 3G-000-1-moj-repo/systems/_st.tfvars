@@ -9,6 +9,7 @@ subnet_cidrs = {
   public_subnet_a_01  = { cidr_block = "10.0.1.0/24", az = "ap-northeast-1a", }
   public_subnet_c_01  = { cidr_block = "10.0.2.0/24", az = "ap-northeast-1c", }
   private_subnet_a_01 = { cidr_block = "10.0.11.0/24", az = "ap-northeast-1a", }
+  private_subnet_c_01 = { cidr_block = "10.0.12.0/24", az = "ap-northeast-1c", }
   protect_subnet_a_01 = { cidr_block = "10.0.21.0/24", az = "ap-northeast-1a", }
   protect_subnet_c_01 = { cidr_block = "10.0.22.0/24", az = "ap-northeast-1c", }
 }
@@ -27,6 +28,10 @@ sg_id = {
 }
 
 /* RDS */
-rds_password = "G8h+U!DZ"
+rds_password    = "iQ7(y%WV"
+database_name   = "terraformrds"
+master_username = "masteruser"
+master_password = "iQ7(y%WV"
+instance_class  = "db.t3.medium"
 
 vgw_id = "vgw-0db6137d659a71475"
