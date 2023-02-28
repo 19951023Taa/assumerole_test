@@ -10,7 +10,7 @@ subnet_cidrs = {
   public_subnet_c_01  = { cidr_block = "10.0.2.0/24", az = "ap-northeast-3c", }
   private_subnet_a_01 = { cidr_block = "10.0.11.0/24", az = "ap-northeast-3a", }
   protect_subnet_a_01 = { cidr_block = "10.0.21.0/24", az = "ap-northeast-3a", }
-  protect_subnet_c_01 = { cidr_block = "10.0.22.0/24", az = "ap-northeast-3c", } 
+  protect_subnet_c_01 = { cidr_block = "10.0.22.0/24", az = "ap-northeast-3c", }
 }
 igw_id = "igw-0077ce6b709025ca0"
 

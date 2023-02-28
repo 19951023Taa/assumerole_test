@@ -1,9 +1,9 @@
 module "vpc_subnets" {
-  source    = "../modules/vpc/subnet"
-  for_each  = var.subnet_cidrs
-  
-  name      = "${local.PRO}-${local.SYS}-${var.ENV}-${replace(each.key, "_", "-")}"
-  vpc_id    = var.vpc_id
+  source   = "../modules/vpc/subnet"
+  for_each = var.subnet_cidrs
+
+  name   = "${local.PRO}-${local.SYS}-${var.ENV}-${replace(each.key, "_", "-")}"
+  vpc_id = var.vpc_id
 
   cidr_block        = each.value.cidr_block
   availability_zone = each.value.az

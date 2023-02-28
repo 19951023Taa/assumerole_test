@@ -21,3 +21,7 @@ variable "sg_id" {}
 
 /* RDS */
 variable "rds_password" {}
+variable "database_name" {}
+variable "master_username" {}
+variable "master_password" {}
+variable "instance_class" {}
