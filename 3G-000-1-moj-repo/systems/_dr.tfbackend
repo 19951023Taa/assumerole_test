@@ -1,0 +1,3 @@
+bucket = "3g-000-1-terraform-bucket"
+key    = "dr/terraform.tfstate"
+region = "ap-northeast-1"
