@@ -1,3 +1,3 @@
-bucket = "3g-000-1-terraform-bucket"
+bucket = "terraform.s3.tfstate"
 key    = "dr/terraform.tfstate"
 region = "ap-northeast-1"
