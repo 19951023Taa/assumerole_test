@@ -3,13 +3,13 @@ variable "name" {}
 
 variable "subnets" {
   description = "list of subnets"
-  type = list
-  default = []
+  type        = list(any)
+  default     = []
 }
 
 variable "subnet_tags" {
   description = "subnet tags"
-  type        = map
+  type        = map(any)
   default     = {}
 }
 

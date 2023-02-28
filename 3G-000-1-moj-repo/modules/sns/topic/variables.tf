@@ -1,20 +1,20 @@
 variable "name" {
-    type    = string
-    default = ""
+  type    = string
+  default = ""
 }
 
 variable "delivery_policy" {
-    type    = string
-    default = ""
+  type    = string
+  default = ""
 }
 
 variable "tags" {
-    type    = map
-    default = {}
+  type    = map(any)
+  default = {}
 }
 
 
 variable "fifo_topic" {
-    type    = bool
-    default = false
+  type    = bool
+  default = false
 }

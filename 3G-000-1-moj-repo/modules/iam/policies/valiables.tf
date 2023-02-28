@@ -1,19 +1,19 @@
 variable "name" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "description" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "policy" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "tags" {
-  type    = map
+  type    = map(any)
   default = {}
 }

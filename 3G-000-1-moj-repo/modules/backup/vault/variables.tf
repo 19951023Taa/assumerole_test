@@ -5,6 +5,6 @@ variable "name" {
 }
 
 variable "tags" {
-  type        = map
-  default     = {}
+  type    = map(any)
+  default = {}
 }

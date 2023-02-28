@@ -1,22 +1,22 @@
 resource "aws_iam_user" "this" {
-    name                = var.name
-    force_destroy       = var.force_destroy
+  name          = var.name
+  force_destroy = var.force_destroy
 
-    tags                = merge(
-      {"Name"    = var.name},
-      var.tags
-    )
+  tags = merge(
+    { "Name" = var.name },
+    var.tags
+  )
 }
 
 resource "aws_iam_user_group_membership" "this" {
-  depends_on            = [aws_iam_user.this]
+  depends_on = [aws_iam_user.this]
 
-  user                  = var.name
-  groups                = var.groups
+  user   = var.name
+  groups = var.groups
 }
 
 resource "aws_iam_user_login_profile" "this" {
-  depends_on              = [aws_iam_user.this]
+  depends_on = [aws_iam_user.this]
 
   user                    = var.name
   pgp_key                 = var.pgp_key

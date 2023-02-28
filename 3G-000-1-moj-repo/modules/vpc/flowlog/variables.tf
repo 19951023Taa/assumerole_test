@@ -36,11 +36,11 @@ variable "max_aggregation_interval" {
 
 variable "tags" {
   description = "Key-value map of resource tags."
-  type        = map
+  type        = map(any)
   default     = {}
 }
 
 variable "name" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }

@@ -1,9 +1,9 @@
 output "subnet_id" {
   description = "subnet ID"
-  value = aws_subnet.this.id
+  value       = aws_subnet.this.id
 }
 
 output "subnet_arn" {
   description = "subnetARN"
-  value = aws_subnet.this.arn
+  value       = aws_subnet.this.arn
 }

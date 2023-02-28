@@ -1,34 +1,34 @@
 variable "name" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "force_destroy" {
-  type        = bool
-  default     = true
+  type    = bool
+  default = true
 }
 
 variable "tags" {
-  type        = map
-  default     = {}
+  type    = map(any)
+  default = {}
 }
 
 variable "groups" {
-  type        = list
-  default     = []
+  type    = list(any)
+  default = []
 }
 
 variable "pgp_key" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "password_reset_required" {
-  type        = bool
-  default     = true
+  type    = bool
+  default = true
 }
 
 variable "password_length" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }

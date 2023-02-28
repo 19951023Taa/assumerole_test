@@ -12,7 +12,7 @@ variable "connectivity_type" {
 
 variable "tags" {
   description = "A map of tags to assign to the resource."
-  type        = map
+  type        = map(any)
   default     = {}
 }
 

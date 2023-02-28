@@ -6,5 +6,5 @@ resource "aws_nat_gateway" "this" {
 }
 
 resource "aws_eip" "this" {
-  vpc               = var.vpc
+  vpc = var.vpc
 }

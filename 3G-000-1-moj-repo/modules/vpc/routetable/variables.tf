@@ -3,7 +3,7 @@ variable "routes" {}
 
 variable "route_table_tags" {
   description = "route table tags"
-  type        = map
+  type        = map(any)
   default     = {}
 }
 

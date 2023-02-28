@@ -1,6 +1,6 @@
 variable "alarm_name" {
-  type      = string
-  default   = ""
+  type    = string
+  default = ""
 }
 
 /*
@@ -73,7 +73,7 @@ variable "actions_enabled" {
 
 variable "alarm_actions" {
   description = "he list of actions to execute when this alarm transitions into an ALARM state from any other state."
-  type        = list
+  type        = list(any)
   default     = []
 }
 
@@ -91,19 +91,19 @@ variable "datapoints_to_alarm" {
 
 variable "insufficient_data_actions" {
   description = "The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state."
-  type        = list
+  type        = list(any)
   default     = []
 }
 
 variable "ok_actions" {
   description = "The list of actions to execute when this alarm transitions into an OK state from any other state."
-  type        = list
+  type        = list(any)
   default     = []
 }
 
 variable "dimensions" {
   description = "The dimensions for the alarm's associated metric."
-  type        = map
+  type        = map(any)
   default     = {}
 }
 
@@ -127,6 +127,6 @@ variable "threshold" {
 }
 
 variable "tags" {
-  type      = map
-  default   = {}
+  type    = map(any)
+  default = {}
 }

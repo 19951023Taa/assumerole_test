@@ -24,7 +24,7 @@ variable "is_enabled" {
 
 variable "tags" {
   description = "tags"
-  type        = map
+  type        = map(any)
   default     = {}
 }
 
@@ -66,21 +66,21 @@ variable "input" {
 }
 
 variable "statement_id" {
-    type    = string
-    default = "AllowExecutionFromEventBridge"
+  type    = string
+  default = "AllowExecutionFromEventBridge"
 }
 
 variable "action" {
-    type    = string
-    default = "lambda:InvokeFunction"
+  type    = string
+  default = "lambda:InvokeFunction"
 }
 
 variable "principal" {
-    type    = string
-    default = "events.amazonaws.com"
+  type    = string
+  default = "events.amazonaws.com"
 }
 
 variable "lambda_function_name" {
-    type    = string
-    default = ""
+  type    = string
+  default = ""
 }

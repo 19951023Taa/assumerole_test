@@ -1,29 +1,29 @@
 variable "name" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "role_description" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "force_detach_policies" {
-  type        = bool
-  default     = true
+  type    = bool
+  default = true
 }
 
 variable "managed_policy_arns" {
-  type        = list
-  default     = []
+  type    = list(any)
+  default = []
 }
 
 variable "assume_role_policy" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "tags" {
-  type    = map
+  type    = map(any)
   default = {}
 }

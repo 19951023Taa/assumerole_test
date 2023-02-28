@@ -1,23 +1,23 @@
 variable "cidr_block" {}
 
 variable "instance_tenancy" {
-  type      = string
-  default   = "default"
+  type    = string
+  default = "default"
 }
 
 variable "enable_dns_support" {
-  type      = bool
-  default   = true
+  type    = bool
+  default = true
 }
 
 variable "enable_dns_hostnames" {
-  type      = bool
-  default   = false
+  type    = bool
+  default = false
 }
 
 variable "enable_classiclink_dns_support" {
-  type      = bool
-  default   = false
+  type    = bool
+  default = false
 }
 
 variable "default_security_group_name" {
@@ -28,7 +28,7 @@ variable "default_security_group_name" {
 
 variable "secondary_cidr_blocks" {
   description = "List of secondary CIDR blocks to associate with the VPC to extend the IP Address pool"
-  type        = list
+  type        = list(any)
   default     = []
 }
 
@@ -52,7 +52,7 @@ variable "vpc_name" {
 
 variable "vpc_tags" {
   description = "A map of tags to add to VPC"
-  type        = map
+  type        = map(any)
   default     = {}
 }
 
@@ -64,10 +64,10 @@ variable "manage_default_security_group" {
 
 variable "default_security_group_tags" {
   description = "A map of tags to add to all resources"
-  type        = map
-  default     = {
-		default		= true
-	}
+  type        = map(any)
+  default = {
+    default = true
+  }
 }
 
 variable "enable_dhcp_options" {
@@ -84,19 +84,19 @@ variable "dhcp_options_domain_name" {
 
 variable "dhcp_options_domain_name_servers" {
   description = "Specify a list of DNS server addresses for DHCP options set, default to AWS provided (requires enable_dhcp_options set to true)"
-  type        = list
+  type        = list(any)
   default     = ["AmazonProvidedDNS"]
 }
 
 variable "dhcp_options_ntp_servers" {
   description = "Specify a list of NTP servers for DHCP options set (requires enable_dhcp_options set to true)"
-  type        = list
+  type        = list(any)
   default     = []
 }
 
 variable "dhcp_options_netbios_name_servers" {
   description = "Specify a list of netbios servers for DHCP options set (requires enable_dhcp_options set to true)"
-  type        = list
+  type        = list(any)
   default     = []
 }
 
@@ -108,7 +108,7 @@ variable "dhcp_options_netbios_node_type" {
 
 variable "dhcp_options_tags" {
   description = "Additional tags for the DHCP option set (requires enable_dhcp_options set to true)"
-  type        = map
+  type        = map(any)
   default     = {}
 }
 
@@ -120,13 +120,13 @@ variable "create_igw" {
 
 variable "public_subnets" {
   description = "A list of public subnets inside the VPC"
-  type        = list
+  type        = list(any)
   default     = []
 }
 
 variable "igw_tags" {
   description = "Additional tags for the internet gateway"
-  type        = map
+  type        = map(any)
   default     = {}
 }
 
@@ -174,6 +174,6 @@ variable "default_security_group_egress" {
 
 variable "common_tags" {
   description = "Additional tags for all VPC resources"
-  type        = map
+  type        = map(any)
   default     = {}
 }

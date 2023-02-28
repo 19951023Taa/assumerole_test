@@ -15,9 +15,9 @@ locals {
 }
 
 resource "aws_eip" "this" {
-  count     = local.is_eip
-  instance  = aws_instance.this.id
-  vpc       = true
+  count    = local.is_eip
+  instance = aws_instance.this.id
+  vpc      = true
   tags = merge(
     { "Name" = var.eip_name },
     var.eip_tags,
@@ -39,9 +39,9 @@ resource "aws_instance" "this" {
     var.tags,
   )
 
-  private_ip  = var.private_ip
-  subnet_id   = var.subnet_id
-  key_name    = var.key_name
+  private_ip              = var.private_ip
+  subnet_id               = var.subnet_id
+  key_name                = var.key_name
   vpc_security_group_ids  = var.vpc_security_group_ids
   disable_api_termination = var.disable_api_termination
   iam_instance_profile    = local.is_role == 1 ? aws_iam_instance_profile.this[0].id : ""
@@ -57,7 +57,7 @@ resource "aws_instance" "this" {
       var.rbd_tags,
     )
   }
-  
+
   dynamic "ebs_block_device" {
     for_each = length(var.ebd_device_name) > 0 ? local.ebd : {}
     content {
