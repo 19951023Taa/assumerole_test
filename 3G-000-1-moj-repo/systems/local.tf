@@ -1,6 +1,6 @@
 locals {
-  PRO = "moj"
-  SYS = "lis"
+  PRO = "terraform"
+  SYS = "test"
 
   operation_cidr_blocks = {
     vdi01          = "198.144.162.132/32",
