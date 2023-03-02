@@ -127,3 +127,18 @@ variable "rbd_tags" {
   type    = map(any)
   default = {}
 }
+
+variable "edb_tags" {
+  type    = map(any)
+  default = {}
+}
+
+variable "root_block_device_name" {
+  type    = string
+  default = ""
+}
+
+variable "edb_block_device_name" {
+  type    = string
+  default = ""
+}

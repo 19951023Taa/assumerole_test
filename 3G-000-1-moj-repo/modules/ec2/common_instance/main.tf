@@ -10,14 +10,15 @@ locals {
       volume_size           = var.ebd_volume_size
       encrypted             = var.ebd_encrypted
       device_name           = var.ebd_device_name
+      edb_block_device_name = var.edb_block_device_name
     }
   }
 }
 
 resource "aws_eip" "this" {
-  count    = local.is_eip
-  instance = aws_instance.this.id
-  vpc      = true
+  count     = local.is_eip
+  instance  = aws_instance.this.id
+  vpc       = true
   tags = merge(
     { "Name" = var.eip_name },
     var.eip_tags,
@@ -39,9 +40,9 @@ resource "aws_instance" "this" {
     var.tags,
   )
 
-  private_ip              = var.private_ip
-  subnet_id               = var.subnet_id
-  key_name                = var.key_name
+  private_ip  = var.private_ip
+  subnet_id   = var.subnet_id
+  key_name    = var.key_name
   vpc_security_group_ids  = var.vpc_security_group_ids
   disable_api_termination = var.disable_api_termination
   iam_instance_profile    = local.is_role == 1 ? aws_iam_instance_profile.this[0].id : ""
@@ -53,20 +54,24 @@ resource "aws_instance" "this" {
     volume_size           = var.rbd_volume_size
     encrypted             = var.rbd_encrypted
     tags = merge(
-      { "Name" = var.rbd_name },
+      { "Name" = var.root_block_device_name },
       var.rbd_tags,
     )
   }
-
+  
   dynamic "ebs_block_device" {
     for_each = length(var.ebd_device_name) > 0 ? local.ebd : {}
     content {
-      delete_on_termination = ebd.delete_on_termination
-      volume_type           = ebd.volume_type
-      iops                  = ebd.iops
-      volume_size           = ebd.volume_size
-      encrypted             = ebd.encrypted
-      device_name           = ebd.device_name
+      delete_on_termination = var.ebd_delete_on_termination
+      volume_type           = var.ebd_volume_type
+      iops                  = var.ebd_iops
+      volume_size           = var.ebd_volume_size
+      encrypted             = var.ebd_encrypted
+      device_name           = var.ebd_device_name
+      tags = merge(
+      { "Name" = var.edb_block_device_name },
+      var.edb_tags,
+    )
     }
   }
 }
