@@ -16,8 +16,11 @@ variable "vgw_id" {}
 
 /* EC2 */
 variable "key_name" {}
-variable "private_ip" {}
 variable "sg_id" {}
+variable "ec2_ap_01" {}
+variable "sg" {
+  
+}
 
 /* RDS */
 variable "rds_password" {}
