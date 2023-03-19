@@ -1,7 +1,7 @@
 /* Common */
 ENV           = "pd"
 region        = "ap-northeast-1"
-profile_name  = "default"
+profile_name  = "pd"
 
 /* VPC */
 vpc_cidr = "10.0.0.0/16"
