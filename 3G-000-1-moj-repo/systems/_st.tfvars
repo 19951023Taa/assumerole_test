@@ -16,23 +16,3 @@ subnet_cidrs = {
 }
 igw_id = "igw-0077ce6b709025ca0"
 
-/* EC2 */
-key_name = "SDX-CR-key-01"
-private_ip = {
-  brdg_01 = "172.29.12.230",
-  jump_01 = "172.29.12.70", #PD subnet
-}
-sg_id = {
-  sg_rds_psql = "sg-0aa014fb9aaea4a9d",
-  sg_ec2_jump = "sg-0b5e495d9b0e43a7b",
-  sg_ec2_brdg = "sg-015711efc0958189f"
-}
-
-/* RDS */
-rds_password    = "iQ7(y%WV"
-database_name   = "terraformrds"
-master_username = "masteruser"
-master_password = "iQ7(y%WV"
-instance_class  = "db.t3.medium"
-
-vgw_id = "vgw-0db6137d659a71475"

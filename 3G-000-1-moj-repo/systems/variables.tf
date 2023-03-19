@@ -15,15 +15,5 @@ variable "vpc_id" {}
 variable "igw_id" {}
 variable "vgw_id" {}
 
-/* EC2 */
-variable "key_name" {}
-variable "sg_id" {}
-variable "ec2_spec" {}
-variable "sg" {}
 
-/* RDS */
-variable "rds_password" {}
-variable "database_name" {}
-variable "master_username" {}
-variable "master_password" {}
-variable "instance_class" {}
+
