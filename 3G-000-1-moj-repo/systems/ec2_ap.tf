@@ -1,6 +1,6 @@
 module "ec2_ap" {
   source = "../modules/ec2/common_instance/"
-  for_each  = var.ec2_ap_01
+  for_each  = { for k,v in var.ec2_spec : k => v if substr(k, -3, 2) == "ap" }
 
   name              = "${local.PRO}-${local.SYS}-${var.ENV}-ec2-${replace(each.key, "_", "-")}"
   rbd_name          = "/dev/sda1"

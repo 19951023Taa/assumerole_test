@@ -1,6 +1,7 @@
 /* Common */
-ENV    = "pd"
-region = "ap-northeast-1"
+ENV           = "pd"
+region        = "ap-northeast-1"
+profile_name  = "default"
 
 /* VPC */
 vpc_cidr = "10.0.0.0/16"
@@ -19,7 +20,7 @@ igw_id = "igw-0077ce6b709025ca0"
 /* EC2 */
 key_name = "moj-lis-key-01"
 sg       = "sg-08d047399741b857b"
-ec2_ap_01 = {
+ec2_spec = {
   ap_01  = { instance_type = "t3.micro", private_ip = "10.0.11.20", subnet = "subnet-0e66e035eb0cac799", }
   ap_02  = { instance_type = "t3.micro", private_ip = "10.0.12.20", subnet = "subnet-0d0f067ddd62b79f6", }
 }

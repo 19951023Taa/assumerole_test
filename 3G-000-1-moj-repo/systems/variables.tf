@@ -6,6 +6,7 @@ variable "ENV" {
 }
 
 variable "region" {}
+variable "profile_name" {}
 
 /* VPC */
 variable "vpc_cidr" {}
@@ -17,10 +18,8 @@ variable "vgw_id" {}
 /* EC2 */
 variable "key_name" {}
 variable "sg_id" {}
-variable "ec2_ap_01" {}
-variable "sg" {
-  
-}
+variable "ec2_spec" {}
+variable "sg" {}
 
 /* RDS */
 variable "rds_password" {}
