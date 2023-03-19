@@ -13,7 +13,6 @@ variable "vpc_cidr" {}
 variable "subnet_cidrs" {}
 variable "vpc_id" {}
 variable "igw_id" {}
-variable "vgw_id" {}
 
 
 
