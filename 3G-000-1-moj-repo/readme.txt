@@ -55,3 +55,6 @@ https://tech.andpad.co.jp/entry/2021/11/25/170000#%E5%90%8C%E4%B8%80%E3%82%B3%E3
 
 ・main.tfのproviderでprofile = var.profile_nameを設定
 ※変数化して各varsファイルでprofile_name  = "pd"、"st"、"dr"を指定すれば環境ごとに作成できる
+
+backend s3は一つのアカウントのS3配下にpd/ st/ drで作成すればいける
+※アカウント変えたらエラーになった
