@@ -45,3 +45,13 @@ json["username"]["value"]; keys = %w(id encrypted_password); puts \
 [keys, *keys.map{|key| values.map{|value| v = value[1][key].split; \
 key == "encrypted_password" ? v.map{|s| `echo #{s} | \
 base64 -di | gpg -r SDX_iam_user_key`.chomp} : v}}.transpose].map{|a| a.join(",")}'
+
+
+参考にした記事
+https://tech.andpad.co.jp/entry/2021/11/25/170000#%E5%90%8C%E4%B8%80%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A7Terraform%E3%82%92%E8%A4%87%E6%95%B0%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E8%A4%87%E6%95%B0%E7%92%B0%E5%A2%83%E3%81%B8plan-apply%E3%81%97%E3%81%9F%E3%81%84
+
+・Roleじゃなくてアクセスキー、シークレットアクセスキーを使用する
+※各アクセスキーをaws configureでpd,st,drで設定する。
+
+・main.tfのproviderでprofile = var.profile_nameを設定
+※変数化して各varsファイルでprofile_name  = "pd"、"st"、"dr"を指定すれば環境ごとに作成できる
