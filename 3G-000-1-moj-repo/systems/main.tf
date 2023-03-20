@@ -12,7 +12,10 @@ terraform {
 
 provider "aws" {
   region  = var.region
-  profile = var.profile_name
+  assume_role {
+    role_arn     = var.role_arn
+    session_name = var.ENV
+  }
   default_tags {
     tags = {
       "Env" = var.ENV

@@ -6,7 +6,7 @@ variable "ENV" {
 }
 
 variable "region" {}
-variable "profile_name" {}
+variable "role_arn" {}
 
 /* VPC */
 variable "vpc_cidr" {}

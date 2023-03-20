@@ -1,7 +1,7 @@
 /* Common */
 ENV           = "pd"
 region        = "ap-northeast-1"
-profile_name  = "pd"
+role_arn      = "arn:aws:iam::550733172573:role/takamasa1-swichrole"
 
 /* VPC */
 vpc_cidr = "10.0.0.0/16"
