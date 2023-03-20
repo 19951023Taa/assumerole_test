@@ -87,7 +87,7 @@ provider "aws" {
 
 ④各pd,st,drの変数ファイルに各アカウントで作成したEC2用のterraform_Roleのarnを記載
 ↓
-role_arn      = "arn:aws:iam::550733172573:role/takamasa1-swichrole"
+role_arn      = "arn:aws:iam::xxxxxxxxxxxx:role/takamasa1-swichrole"
 
 
 backend s3は一つのアカウントのS3配下にpd/ st/ drで作成すればいける
