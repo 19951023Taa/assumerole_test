@@ -1,3 +1,0 @@
-bucket = "terraform.s3.tfstate.pd.st"
-key    = "dr/terraform.tfstate"
-region = "ap-northeast-1"

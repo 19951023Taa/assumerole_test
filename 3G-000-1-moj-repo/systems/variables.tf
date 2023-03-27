@@ -1,6 +1,6 @@
 /* Common */
 variable "ENV" {
-  description = "Environment Code ex)PD/ST/DV"
+  description = "Environment Code ex)PD/ST"
   type        = string
   default     = ""
 }
@@ -10,9 +10,6 @@ variable "role_arn" {}
 
 /* VPC */
 variable "vpc_cidr" {}
-variable "subnet_cidrs" {}
-variable "vpc_id" {}
-variable "igw_id" {}
 
 
 
